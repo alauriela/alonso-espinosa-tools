@@ -2,11 +2,26 @@
 <script>
   new CozeWebSDK.WebChatClient({
     config: {
+      type: 'bot',
       bot_id: '7613790711791665205',
     },
-    componentProps: {
-      title: 'Alonso & Espinosa',
-      icon: 'https://cdn.icon-icons.com/icons2/1371/PNG/512/robot02_90810.png',
+    auth: {
+      type: 'token',
+      token: 'cztei_0Ca7GmxNyeEWQKWzmtbpjnv9lyFvulqgWu5atDTQzU3078IEktZPQc3cchppBGN4n',
+      onRefreshToken: async () => 'cztei_0Ca7GmxNyeEWQKWzmtbpjnv9lyFvulqgWu5atDTQzU3078IEktZPQc3cchppBGN4n'
     },
+    ui: {
+      base: {
+        icon: 'https://sf-coze-web-cdn.coze.com/obj/eden-sg/lm-lgvj/ljhwZthlaukjlkulzlp/coze/chatsdk-logo.png',
+        layout: 'pc',
+        lang: 'en',
+        zIndex: 1000
+      },
+      chatBot: {
+        title: 'Alonso & Espinosa',
+        uploadable: true,
+        width: 390,
+      }
+    }
   });
 </script>

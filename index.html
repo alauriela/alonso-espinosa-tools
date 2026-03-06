@@ -1,17 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Herramientas Alonso & Espinosa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herramientas | Alonso & Espinosa</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f5f7;
+      color: #1f2a36;
+    }
+
+    .contenedor {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+
+    .cabecera {
+      background: white;
+      border-radius: 14px;
+      padding: 40px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      margin: 0 0 15px 0;
+      font-size: 34px;
+      color: #1a2a3a;
+    }
+
+    .subtexto {
+      font-size: 17px;
+      line-height: 1.6;
+      color: #4b5a68;
+      max-width: 760px;
+    }
+
+    .rejilla {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .tarjeta {
+      background: white;
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    }
+
+    .tarjeta h2 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 22px;
+      color: #1a2a3a;
+    }
+
+    .tarjeta p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #556371;
+      margin-bottom: 20px;
+    }
+
+    .estado {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 6px 10px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .disponible {
+      background: #e7f6ec;
+      color: #1f7a3f;
+    }
+
+    .proximamente {
+      background: #eef2f6;
+      color: #5f6c78;
+    }
+
+    .boton {
+      display: inline-block;
+      text-decoration: none;
+      background: #1a2a3a;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .boton:hover {
+      background: #24384d;
+    }
+
+    .pie {
+      margin-top: 35px;
+      font-size: 14px;
+      color: #6c7884;
+      text-align: center;
+    }
+  </style>
 </head>
-
 <body>
+  <div class="contenedor">
+    <section class="cabecera">
+      <h1>Herramientas de diagnóstico operativo</h1>
+      <p class="subtexto">
+        En Alonso & Espinosa desarrollamos herramientas sencillas para ayudar a pymes a evaluar su organización interna, detectar puntos de fricción operativa y orientar posibles mejoras.
+      </p>
+    </section>
 
-<h2>Herramientas de diagnóstico operativo</h2>
+    <section class="rejilla">
+      <article class="tarjeta">
+        <span class="estado disponible">Disponible</span>
+        <h2>Diagnóstico operativo rápido</h2>
+        <p>
+          Evaluación breve para identificar señales de desorden operativo, falta de estructura, duplicidad de tareas o dependencia excesiva de personas clave.
+        </p>
+        <a class="boton" href="diagnostico.html">Abrir herramienta</a>
+      </article>
 
-<p>Estamos preparando herramientas de evaluación para pymes.</p>
+      <article class="tarjeta">
+        <span class="estado proximamente">Próximamente</span>
+        <h2>Evaluador de madurez digital</h2>
+        <p>
+          Herramienta orientativa para valorar el nivel de organización digital, uso de herramientas y capacidad de seguimiento interno.
+        </p>
+      </article>
 
-<p>Próximamente disponible.</p>
+      <article class="tarjeta">
+        <span class="estado proximamente">Próximamente</span>
+        <h2>Evaluación de carga operativa</h2>
+        <p>
+          Revisión básica para detectar sobrecarga administrativa, tareas repetitivas y posibles cuellos de botella en la gestión diaria.
+        </p>
+      </article>
+    </section>
 
+    <div class="pie">
+      Alonso & Espinosa · Consultoría Operativa e IA Aplicada
+    </div>
+  </div>
 </body>
 </html>

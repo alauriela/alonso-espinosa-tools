@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="favicon.png">
+<title>Evaluación de dependencia del fundador | Alonso & Espinosa</title>
+
+<style>
+body{
+font-family: Arial, sans-serif;
+background:#f3f5f7;
+margin:0;
+padding:0;
+color:#1f2a36;
+}
+
+.contenedor{
+max-width:800px;
+margin:auto;
+padding:40px 20px;
+}
+
+.tarjeta{
+background:white;
+border-radius:14px;
+padding:30px;
+box-shadow:0 4px 18px rgba(0,0,0,0.08);
+margin-bottom:20px;
+}
+
+h1{
+margin-top:0;
+color:#1a2a3a;
+}
+
+.pregunta{
+margin-top:25px;
+}
+
+select{
+width:100%;
+padding:10px;
+border-radius:6px;
+border:1px solid #ccc;
+margin-top:8px;
+}
+
+button{
+margin-top:30px;
+background:#1a2a3a;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.resultado{
+margin-top:30px;
+padding:20px;
+border-radius:10px;
+background:#eef2f6;
+display:none;
+}
+
+.nivel{
+font-size:18px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.contacto{
+margin-top:20px;
+padding-top:15px;
+border-top:1px solid #ccc;
+}
+
+.btn-contacto{
+display:inline-block;
+margin-top:10px;
+background:#1a2a3a;
+color:white;
+padding:10px 16px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<div class="tarjeta">
+
+<h1>Evaluación de dependencia del fundador</h1>
+
+<p>
+Esta evaluación breve permite detectar si la empresa depende en exceso de una sola persona
+para decidir, supervisar, resolver incidencias o sostener la operativa diaria.
+</p>
+
+<div class="pregunta">
+<label>¿Cuántas decisiones importantes pasan siempre por la misma persona?</label>
+<select id="q1">
+<option value="0">Pocas</option>
+<option value="1">Bastantes</option>
+<option value="2">Casi todas</option>
+</select>
+</div>
+
+<div class="pregunta">
+<label>Si esa persona faltara varios días, ¿la operativa seguiría funcionando?</label>
+<select id="q2">
+<option value="0">Sí, con bastante normalidad</option>
+<option value="1">Con dificultades</option>
+<option value="2">Se bloquearían muchas cosas</option>
+</select>
+</div>
+
+<div class="pregunta">
+<label>¿La información clave está compartida o concentrada?</label>
+<select id="q3">
+<option value="0">Compartida y accesible</option>
+<option value="1">Parcialmente compartida</option>
+<option value="2">Muy concentrada en una persona</option>
+</select>
+</div>
+
+<div class="pregunta">
+<label>¿Quién resuelve la mayoría de incidencias del día a día?</label>
+<select id="q4">
+<option value="0">El equipo o responsables intermedios</option>
+<option value="1">Se reparten, pero con apoyo frecuente</option>
+<option value="2">Principalmente una sola persona</option>
+</select>
+</div>
+
+<div class="pregunta">
+<label>¿Existen funciones y responsabilidades claramente delegadas?</label>
+<select id="q5">
+<option value="0">Sí</option>
+<option value="1">Solo en parte</option>
+<option value="2">No de forma clara</option>
+</select>
+</div>
+
+<div class="pregunta">
+<label>¿La empresa puede avanzar sin supervisión continua de gerencia o propiedad?</label>
+<select id="q6">
+<option value="0">Sí, en gran parte</option>
+<option value="1">Solo a medias</option>
+<option value="2">No, depende mucho de ello</option>
+</select>
+</div>
+
+<button onclick="calcular()">Ver resultado</button>
+
+<div class="resultado" id="resultado"></div>
+
+<div style="margin-top:20px;">
+<a href="index.html" style="text-decoration:none;color:#1a2a3a;font-weight:bold;">
+← Volver a herramientas
+</a>
+</div>
+
+</div>
+
+</div>
+
+<script>
+function calcular(){
+
+let total = 0;
+
+for(let i=1;i<=6;i++){
+total += parseInt(document.getElementById("q"+i).value);
+}
+
+let nivel="";
+let texto="";
+
+if(total <=3){
+
+nivel="🟢 Dependencia controlada";
+
+texto="La empresa parece contar con un nivel razonable de autonomía operativa. Aun así, siempre puede haber margen de mejora en delegación, documentación y continuidad interna.";
+
+}
+
+else if(total <=7){
+
+nivel="🟠 Dependencia relevante";
+
+texto="Se observan señales de dependencia significativa de una persona clave. Puede haber margen de mejora en delegación, claridad de funciones y reparto de información crítica.";
+
+}
+
+else{
+
+nivel="🔴 Dependencia crítica";
+
+texto="Existen señales claras de que gran parte de la operativa depende de una sola persona. Un análisis más profundo podría ayudar a reducir riesgo operativo, mejorar delegación y dar más estabilidad al negocio.";
+
+}
+
+document.getElementById("resultado").style.display="block";
+
+document.getElementById("resultado").innerHTML = `
+<div class="nivel">${nivel}</div>
+<p>${texto}</p>
+
+<div class="contacto">
+<strong>¿Quieres profundizar en este análisis?</strong>
+
+<p>
+En Alonso & Espinosa analizamos puntos de dependencia operativa, reparto de funciones
+y estructura interna para ayudar a que la empresa gane autonomía y continuidad.
+</p>
+
+<a class="btn-contacto"
+href="https://forms.gle/wpVuwgG6G656S4ss7"
+target="_blank">
+Continuar con la solicitud
+</a>
+
+<p style="margin-top:12px; font-size:14px; line-height:1.5;">
+Si prefieres una vía más directa, también puedes escribirnos a
+<strong>conchialonsogarcia5@gmail.com</strong>
+indicando que has completado la evaluación de dependencia del fundador.
+</p>
+</div>
+`;
+
+}
+</script>
+
+</body>
+</html>

@@ -1,24 +1,48 @@
 <!doctype html>
 <html lang="es">
 <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDTCDRWJB4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JDTCDRWJB4');
+  </script>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Cookies · Laboratorio de Diagnóstico</title>
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
   <style>
-    :root{ --bg: #fcfaf7; --text: #2c2c2c; --muted: #5e5e5e; --accent: #2c3e50; --line: #e0dcd5; --sans: 'Inter', sans-serif; --serif: 'Cormorant Garamond', serif; }
+    :root{ 
+      --bg: #fcfaf7; 
+      --text: #2c2c2c; 
+      --muted: #5e5e5e; 
+      --accent: #2c3e50; 
+      --line: #e0dcd5; 
+      --sans: 'Inter', sans-serif; 
+      --serif: 'Cormorant Garamond', serif; 
+    }
     body{ margin:0; font-family:var(--sans); color:var(--text); background:var(--bg); line-height:1.6; }
     .wrap{ max-width:800px; margin:0 auto; padding:60px 20px; }
-    h1{ font-family:var(--serif); font-size:28px; text-transform:uppercase; border-bottom:1px solid var(--line); padding-bottom:20px; }
-    p{ color:var(--muted); font-size:14px; }
+    h1{ font-family:var(--serif); font-size:28px; text-transform:uppercase; border-bottom:1px solid var(--line); padding-bottom:20px; margin-bottom:30px; font-weight:500; letter-spacing:0.05em; }
+    p{ color:var(--muted); font-size:14px; margin-bottom:20px; }
+    .back{ display:inline-block; margin-bottom:40px; text-decoration:none; color:var(--accent); font-weight:700; font-size:12px; text-transform:uppercase; }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <a href="index.html" style="text-decoration:none; color:var(--accent); font-weight:700; font-size:12px; text-transform:uppercase;">← Volver</a>
+    <a href="index.html" class="back">← Volver</a>
     <h1>Política de Cookies</h1>
-    <p>Este sitio web es estático y <strong>no utiliza cookies de rastreo publicitario ni de terceros</strong> para identificar a los usuarios.</p>
+    <p>Este sitio web es estático y <strong>no utiliza cookies de rastreo publicitario ni de terceros</strong> para identificar a los usuarios de forma personal.</p>
     <p>Utilizamos <strong>Google Analytics 4</strong> para medir de forma anónima y agregada el interés en las diferentes evaluaciones (número de visitas y diagnósticos completados). Esto nos ayuda a mejorar el recurso sin comprometer su anonimato.</p>
     <p>Puede gestionar o bloquear las cookies en cualquier momento desde la configuración de su navegador.</p>
+    
+    <footer style="margin-top:60px; font-size:11px; color:var(--muted); border-top:1px solid var(--line); padding-top:20px; text-transform:uppercase; letter-spacing:0.1em;">
+      © 2026 Alonso & Espinosa · Consultoría Operativa
+    </footer>
   </div>
 </body>
 </html>
